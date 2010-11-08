@@ -1,0 +1,7 @@
+enable:
+  - bundler
+  - rspec
+  - yard 
+variables:
+  dm_dependency: ~> 1.0.0
+  do_dependency: ~> 0.10.2

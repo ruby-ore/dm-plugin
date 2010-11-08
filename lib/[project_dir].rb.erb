@@ -1,0 +1,4 @@
+require 'dm-core'
+require '<%= @project_dir -%>/is/<%= @namespace_dirs.last -%>'
+
+DataMapper::Model.append_extensions <%= @namespace -%>

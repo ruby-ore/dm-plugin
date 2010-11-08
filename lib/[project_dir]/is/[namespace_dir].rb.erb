@@ -1,0 +1,16 @@
+<%- @modules.each_with_index do |namespace,n| -%>
+<%= indent(n) %>module <%= namespace %>
+<%- end -%>
+<%= indent(@module_depth) %>def is_<%= @modules.last.downcase -%>
+<%= indent(@module_depth) %>  extend <%= @module -%>::ClassMethods
+<%= indent(@module_depth) %>  include <%= @module -%>::InstanceMethods
+<%= indent(@module_depth) %>end
+
+<%= indent(@module_depth) %>module ClassMethods
+<%= indent(@module_depth) %>end
+
+<%= indent(@module_depth) %>module InstanceMethods
+<%= indent(@module_depth) %>end
+<%- (@module_depth - 1).downto(0) do |n| -%>
+<%= indent(n) %>end
+<%- end -%>
