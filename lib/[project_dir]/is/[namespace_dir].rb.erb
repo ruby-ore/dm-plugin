@@ -1,7 +1,7 @@
 <%- @modules.each_with_index do |namespace,n| -%>
 <%= indent(n) %>module <%= namespace %>
 <%- end -%>
-<%= indent(@module_depth) %>def is_<%= @modules.last.downcase -%>
+<%= indent(@module_depth) %>def is_<%= @modules.last.downcase %>
 <%= indent(@module_depth) %>  extend <%= @module -%>::ClassMethods
 <%= indent(@module_depth) %>  include <%= @module -%>::InstanceMethods
 <%= indent(@module_depth) %>end
